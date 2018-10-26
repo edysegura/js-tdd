@@ -1,3 +1,5 @@
 export class MathService {
-  static adder() {}
+  static adder(a, b) {
+    return a + b;
+  }
 }
