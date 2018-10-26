@@ -1,7 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "tdd": "jest --watch"
   },
   "license": "MIT",
   "devDependencies": {
