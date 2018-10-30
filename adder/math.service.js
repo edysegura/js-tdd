@@ -1,5 +1,7 @@
 export class MathService {
   static adder(...numbers) {
-    return numbers.reduce((current, next) => current + next)
+    return numbers
+      .map(number => +number)
+      .reduce((current, next) => current + next)
   }
 }
