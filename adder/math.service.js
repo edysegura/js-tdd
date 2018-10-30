@@ -3,6 +3,7 @@ export class MathService {
     const result = numbers
       .map(number => +number)
       .reduce((current, next) => current + next)
-    return result
+    
+    return isNaN(result) ? null : result
   }
 }
