@@ -1,16 +1,17 @@
 export class MathService {
-  static areValidNumbers(numbers) {
-    const isNumber = number => Number.isFinite(parseFloat(number))
-    return numbers.every(isNumber)
-  }
+  static adder() {
+    const amount = arguments.length
+    let total = 0
 
-  static adder(...numbers) {
-    let result = null
-    if (this.areValidNumbers(numbers)) {
-      result = numbers
-        .map(number => +number)
-        .reduce((current, next) => current + next)
+    if (amount > 0) {
+      for (let i = 0; i < amount; i++) {
+        let currentNumber = parseFloat(arguments[i])
+        if (isNaN(currentNumber)) return null
+        total += currentNumber
+      }
+      return total
     }
-    return result
+
+    return null
   }
 }
