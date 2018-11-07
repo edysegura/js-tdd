@@ -1,11 +1,11 @@
-export class MathService {
-  static adder() {
-    const amount = arguments.length
-    let total = 0
+export const MathService = {
+  adder: function() {
+    var amount = arguments.length
+    var total = 0
 
     if (amount > 0) {
-      for (let i = 0; i < amount; i++) {
-        let currentNumber = parseFloat(arguments[i])
+      for (var i = 0; i < amount; i++) {
+        var currentNumber = parseInt(arguments[i], 10)
         if (isNaN(currentNumber)) return null
         total += currentNumber
       }
